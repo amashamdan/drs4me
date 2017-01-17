@@ -13,13 +13,13 @@
 
 	<div id="drawer">
 		<ul><h3>Menu</h3><hr>
-			<li><a href="/">Search</a><br></li><hr class="drawer-hr">
+			<li><a href="/search">Search</a><br></li><hr class="drawer-hr">
 			<% if (!user) { %>
-			<li><a href="/">User Login</a><br></li><hr class="drawer-hr">
-			<li><a href="/">Doctor Login</a><br></li><hr class="drawer-hr">
+			<li><a href="/login">User Login</a><br></li><hr class="drawer-hr">
+			<li><a href="/doctorLogin">Doctor Login</a><br></li><hr class="drawer-hr">
 			<% } else { %>
-			<li><a href="/">Dashbaord</a><br></li><hr class="drawer-hr">
-			<li><a href="logout">Logout</a><br></li><hr class="drawer-hr">
+			<li><a href="/dashboard">Dashbaord</a><br></li><hr class="drawer-hr">
+			<li><a href="/logout">Logout</a><br></li><hr class="drawer-hr">
 			<% } %>
 			<button id="drawer-close-button">Close</button>
 		</ul>
@@ -30,13 +30,13 @@
 			<a href="/"><img id="logo" src="images/logo.svg"></a>
 			<i class="fa fa-bars" id="drawer-button" aria-hidden="true"></i>
 			<div id="menu-button-wrapper">
-				<button class="generic-button"><i class="fa fa-search" aria-hidden="true"></i> Search</button>
+				<a href="/search"><button class="generic-button"><i class="fa fa-search" aria-hidden="true"></i> Search</button></a>
 				<% if (!user) { %>
-				<button class="generic-button"><i class="fa fa-sign-in" aria-hidden="true"></i> User Login</button>
-				<button class="generic-button"><i class="fa fa-user-md" aria-hidden="true"></i> Doctor Login</button>
+				<a href="/login"><button class="generic-button"><i class="fa fa-sign-in" aria-hidden="true"></i> User Login</button></a>
+				<a href="/doctorLogin"><button class="generic-button"><i class="fa fa-user-md" aria-hidden="true"></i> Doctor Login</button></a>
 				<% } else { %>
-				<button class="generic-button"><i class="fa fa-cogs" aria-hidden="true"></i> Dashboard</button>
-				<button class="danger-button"><i class="fa fa-sign-out" aria-hidden="true"></i> Logout</button>
+				<a href="/dashboard"><button class="generic-button"><i class="fa fa-cogs" aria-hidden="true"></i> Dashboard</button></a>
+				<a href="/logout"><button class="danger-button"><i class="fa fa-sign-out" aria-hidden="true"></i> Logout</button></a>
 				<% } %>
 			</div>
 		</div>
@@ -64,7 +64,7 @@
 
 	<div class="footer">
 		<div class="sizer">
-			<p><a href="/">Admin Login</a></p>
+			<p><a href="/admin">Admin Login</a></p>
 			<p>Copyright © Drs4Me 2017. All Rights Reserved</p>
 			<p>Icons made by <a href="http://www.flaticon.com/authors/madebyoliver" title="Madebyoliver">Madebyoliver</a> from <a href="http://www.flaticon.com" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></p>
 		</div>
