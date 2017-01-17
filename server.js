@@ -25,6 +25,8 @@ var index = require("./routes/index");
 app.use("/", index);
 var login = require("./routes/login");
 app.use("/login", login);
+var signup = require("./routes/signup");
+app.use("/signup", signup);
 
 var PORT = Number(process.env.PORT || 8080);
 app.listen(PORT);
