@@ -143,11 +143,14 @@ hr {
 	}
 }
 
-.generic-button, .danger-button {
+.generic-button, .danger-button, .ok-button {
 	padding: 5px;
 	border-radius: 3px;
 	width: 100px;
 	border: none;
+	&:hover {
+		cursor: pointer;
+	}
 }
 
 .generic-button {
@@ -160,7 +163,24 @@ hr {
 	color: $danger-font-color;
 }
 
+.ok-button {
+	background-color: $ok-bk-color;
+	color: $ok-font-color;
+}
 
+#login-form {
+	text-align: center;
+	input {
+		padding: 5px;
+		margin-bottom: 10px;
+		border-radius: 3px;
+		border: 1px solid gray;
+		width: 300px;
+	}
+	button {
+		margin-bottom: 10px;
+	}
+}
 
 @media screen and (min-width: 575px) {
 	#drawer-button {

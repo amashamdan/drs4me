@@ -154,44 +154,71 @@ hr {
 }
 
 /* line 146, ../sass/screen.scss */
-.generic-button, .danger-button {
+.generic-button, .danger-button, .ok-button {
   padding: 5px;
   border-radius: 3px;
   width: 100px;
   border: none;
 }
+/* line 151, ../sass/screen.scss */
+.generic-button:hover, .danger-button:hover, .ok-button:hover {
+  cursor: pointer;
+}
 
-/* line 153, ../sass/screen.scss */
+/* line 156, ../sass/screen.scss */
 .generic-button {
   background-color: #7D7C7A;
   color: white;
 }
 
-/* line 158, ../sass/screen.scss */
+/* line 161, ../sass/screen.scss */
 .danger-button {
   background-color: #F05D5E;
   color: white;
 }
 
+/* line 166, ../sass/screen.scss */
+.ok-button {
+  background-color: #0F7173;
+  color: white;
+}
+
+/* line 171, ../sass/screen.scss */
+#login-form {
+  text-align: center;
+}
+/* line 173, ../sass/screen.scss */
+#login-form input {
+  padding: 5px;
+  margin-bottom: 10px;
+  border-radius: 3px;
+  border: 1px solid gray;
+  width: 300px;
+}
+/* line 180, ../sass/screen.scss */
+#login-form button {
+  margin-bottom: 10px;
+}
+
 @media screen and (min-width: 575px) {
-  /* line 166, ../sass/screen.scss */
+  /* line 186, ../sass/screen.scss */
   #drawer-button {
     display: none;
   }
 
-  /* line 169, ../sass/screen.scss */
+  /* line 189, ../sass/screen.scss */
   #menu-button-wrapper {
     display: block;
   }
 
-  /* line 172, ../sass/screen.scss */
+  /* line 192, ../sass/screen.scss */
   .feature, .doctor {
     width: 45%;
     margin: 10px 5px 0 5px;
   }
 }
 @media screen and (min-width: 750px) {
-  /* line 179, ../sass/screen.scss */
+  /* line 199, ../sass/screen.scss */
   .feature, .doctor {
     width: 30%;
     margin: 10px 5px 0 5px;
