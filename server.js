@@ -23,6 +23,8 @@ app.use(session({
 
 var index = require("./routes/index");
 app.use("/", index);
+var login = require("./routes/login");
+app.use("/login", login);
 
 var PORT = Number(process.env.PORT || 8080);
 app.listen(PORT);
