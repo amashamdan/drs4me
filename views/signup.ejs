@@ -36,21 +36,19 @@
 	<hr>
 	<div class="section sizer">
 		<p>Please fill in the below form and click 'Sign Up' button when you are done (all fields are required).</p><hr style="margin: 10px 0 10px 0">
-		<form id="signup-form">
+		<form id="signup-form" method="post" action="/signup">
 			<p>First name:</p>
 			<input type="text" name="firstName" placeholder="First name" required>
 			<p>Last name:</p>
 			<input type="text" name="lastName" placeholder="Last name" required>
-			<p>Username:</p>
-			<input type="text" name="username" placeholder="Username" required>
-			<p>Password <span style="font-size: 0.8em">(must be least 8 characters, and contain capital letters, numbers and special characters)</span>:</p>
-			<input type="password" name="password1" placeholder="Password" required>
-			<p>Confirm password:</p>
-			<input type="password" name="password2" placeholder="Confirm password" required>
-			<p>Phone number:</p>
-			<input type="text" name="phone" placeholder="Phone number" required>
 			<p>Email:</p>
-			<input type="text" name="email" placeholder="Email" required><br>
+			<input id="email" type="text" name="email" placeholder="Email" required><br>
+			<p>Password <span style="font-size: 0.8em">(must be least 8 characters, and contain capital letters, numbers and special characters)</span>:</p>
+			<input id="password1" type="password" name="password1" placeholder="Password" required>
+			<p>Confirm password:</p>
+			<input id="password2" type="password" name="password2" placeholder="Confirm password" required>
+			<p>Phone number:</p>
+			<input id="phone" type="text" name="phone" placeholder="Phone number" required>
 			<button type="submit" class="ok-button"><i class="fa fa-user-plus" aria-hidden="true"></i> Sign Up</button>
 		</form>
 	</div>
@@ -62,6 +60,6 @@
 			<p>Icons made by <a href="http://www.flaticon.com/authors/madebyoliver" title="Madebyoliver">Madebyoliver</a> from <a href="http://www.flaticon.com" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></p>
 		</div>
 	</div>
-	<script src="scripts/login.js"></script>
+	<script src="scripts/signup.js"></script>
 </body>
 </html>
