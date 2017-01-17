@@ -184,6 +184,14 @@ hr {
 	}
 }
 
+.error-message {
+	background-color: $danger-bk-color;
+	color: $danger-font-color;
+	padding: 5px;
+	border-radius: 3px;
+	margin: 5px 0 5px 0;
+}
+
 @media screen and (min-width: 575px) {
 	#drawer-button {
 		display: none;

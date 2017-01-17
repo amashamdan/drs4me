@@ -202,25 +202,34 @@ hr {
   margin-bottom: 10px;
 }
 
+/* line 187, ../sass/screen.scss */
+.error-message {
+  background-color: #F05D5E;
+  color: white;
+  padding: 5px;
+  border-radius: 3px;
+  margin: 5px 0 5px 0;
+}
+
 @media screen and (min-width: 575px) {
-  /* line 188, ../sass/screen.scss */
+  /* line 196, ../sass/screen.scss */
   #drawer-button {
     display: none;
   }
 
-  /* line 191, ../sass/screen.scss */
+  /* line 199, ../sass/screen.scss */
   #menu-button-wrapper {
     display: block;
   }
 
-  /* line 194, ../sass/screen.scss */
+  /* line 202, ../sass/screen.scss */
   .feature, .doctor {
     width: 45%;
     margin: 10px 5px 0 5px;
   }
 }
 @media screen and (min-width: 750px) {
-  /* line 201, ../sass/screen.scss */
+  /* line 209, ../sass/screen.scss */
   .feature, .doctor {
     width: 30%;
     margin: 10px 5px 0 5px;
