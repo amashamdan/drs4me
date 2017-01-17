@@ -1,0 +1,199 @@
+/* line 14, ../sass/screen.scss */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* line 20, ../sass/screen.scss */
+body {
+  font-family: 'PT Sans', sans-serif;
+  background-color: #EBEBEB;
+}
+
+/* line 25, ../sass/screen.scss */
+.sizer {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* line 31, ../sass/screen.scss */
+#logo {
+  width: 150px;
+}
+
+/* line 35, ../sass/screen.scss */
+#menu-button-wrapper {
+  display: none;
+}
+
+/* line 39, ../sass/screen.scss */
+.menu {
+  background-color: white;
+}
+/* line 41, ../sass/screen.scss */
+.menu div {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+/* line 50, ../sass/screen.scss */
+.fa-bars {
+  font-size: 1.1em;
+  margin: 0 10px 0 10px;
+}
+/* line 53, ../sass/screen.scss */
+.fa-bars:hover {
+  cursor: pointer;
+}
+
+/* line 58, ../sass/screen.scss */
+#drawer {
+  width: 280px;
+  height: 300px;
+  margin: 0;
+  position: fixed;
+  background-color: black;
+  color: white;
+  opacity: 0.9;
+  transform: translate(-300px, 0);
+  transition: transform 0.3s ease;
+  padding: 10px;
+}
+/* line 69, ../sass/screen.scss */
+#drawer.open {
+  transform: translate(0, 0);
+}
+/* line 72, ../sass/screen.scss */
+#drawer li {
+  margin: 10px 0 10px 0;
+}
+/* line 75, ../sass/screen.scss */
+#drawer a {
+  text-decoration: none;
+  color: white;
+}
+
+/* line 81, ../sass/screen.scss */
+hr {
+  margin: 0;
+}
+
+/* line 85, ../sass/screen.scss */
+.drawer-hr {
+  height: 1px;
+  border: none;
+  background-color: white;
+}
+
+/* line 91, ../sass/screen.scss */
+.section {
+  margin: 10px auto 10px auto;
+  padding: 10px;
+  background-color: white;
+  color: gray;
+}
+
+/* line 99, ../sass/screen.scss */
+#drawer-close-button {
+  width: 100%;
+  background-color: #F05D5E;
+  color: white;
+  padding: 5px;
+  border: none;
+  border-radius: 3px;
+  margin-top: 20px;
+}
+
+/* line 109, ../sass/screen.scss */
+.features, .doctors {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  justify-content: space-around;
+}
+
+/* line 116, ../sass/screen.scss */
+.feature, .doctor {
+  width: 100%;
+  background-color: #EBEBEB;
+  margin-top: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  text-align: center;
+}
+/* line 123, ../sass/screen.scss */
+.feature .fa, .doctor .fa {
+  font-size: 1.5em;
+}
+
+/* line 128, ../sass/screen.scss */
+.doctor-photo {
+  width: 130px;
+  border-radius: 65px;
+}
+
+/* line 133, ../sass/screen.scss */
+.footer {
+  background-color: white;
+  color: gray;
+  padding: 10px;
+  font-size: 0.7em;
+}
+/* line 138, ../sass/screen.scss */
+.footer p {
+  margin-bottom: 5px;
+}
+/* line 140, ../sass/screen.scss */
+.footer p a {
+  color: gray;
+}
+
+/* line 146, ../sass/screen.scss */
+.generic-button, .danger-button {
+  padding: 5px;
+  border-radius: 3px;
+  width: 100px;
+  border: none;
+}
+
+/* line 153, ../sass/screen.scss */
+.generic-button {
+  background-color: #7D7C7A;
+  color: white;
+}
+
+/* line 158, ../sass/screen.scss */
+.danger-button {
+  background-color: #F05D5E;
+  color: white;
+}
+
+@media screen and (min-width: 575px) {
+  /* line 166, ../sass/screen.scss */
+  #drawer-button {
+    display: none;
+  }
+
+  /* line 169, ../sass/screen.scss */
+  #menu-button-wrapper {
+    display: block;
+  }
+
+  /* line 172, ../sass/screen.scss */
+  .feature, .doctor {
+    width: 45%;
+    margin: 10px 5px 0 5px;
+  }
+}
+@media screen and (min-width: 750px) {
+  /* line 179, ../sass/screen.scss */
+  .feature, .doctor {
+    width: 30%;
+    margin: 10px 5px 0 5px;
+  }
+}
