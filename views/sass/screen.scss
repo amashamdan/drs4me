@@ -123,6 +123,7 @@ hr {
 	.fa {
 		font-size: 1.5em;
 	} 
+	box-shadow: 5px 5px 3px gray;
 }
 
 .doctor-photo {
@@ -168,14 +169,15 @@ hr {
 	color: $ok-font-color;
 }
 
-#login-form {
-	text-align: center;
+#login-form, #signup-form {
+	width: 300px;
+	margin: 0 auto;
 	input {
 		padding: 5px;
 		margin-bottom: 10px;
 		border-radius: 3px;
 		border: 1px solid gray;
-		width: 300px;
+		width: 100%;
 	}
 	button {
 		margin-bottom: 10px;
