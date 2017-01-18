@@ -2,6 +2,7 @@ var express = require("express");
 var secure = require('express-force-https');
 require("ejs");
 var session = require("client-sessions");
+var csrf = require("csurf");
 
 var app = express();
 app.use(secure);
@@ -20,6 +21,10 @@ app.use(session({
 	secure: true, //only use cookies over https
 	ephemeral: true //Delete this cookie when the broswer is closed.
 }));
+
+/* THIS MUST LIKE THIS IN THIS ORDER. Needed for csrf to work properly. */
+app.use(require("body-parser").urlencoded({extended: true}));
+app.use(csrf());
 
 var index = require("./routes/index");
 app.use("/", index);
