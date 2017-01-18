@@ -184,12 +184,20 @@ hr {
 	}
 }
 
-.error-message {
-	background-color: $danger-bk-color;
-	color: $danger-font-color;
+.error-message, .success-message {
 	padding: 5px;
 	border-radius: 3px;
 	margin: 5px 0 5px 0;
+}
+
+.error-message {
+	background-color: $danger-bk-color;
+	color: $danger-font-color;
+}
+
+.success-message {
+	background-color: $ok-bk-color;
+	color: $ok-font-color;	
 }
 
 @media screen and (min-width: 575px) {

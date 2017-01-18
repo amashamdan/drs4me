@@ -203,33 +203,43 @@ hr {
 }
 
 /* line 187, ../sass/screen.scss */
-.error-message {
-  background-color: #F05D5E;
-  color: white;
+.error-message, .success-message {
   padding: 5px;
   border-radius: 3px;
   margin: 5px 0 5px 0;
 }
 
+/* line 193, ../sass/screen.scss */
+.error-message {
+  background-color: #F05D5E;
+  color: white;
+}
+
+/* line 198, ../sass/screen.scss */
+.success-message {
+  background-color: #0F7173;
+  color: white;
+}
+
 @media screen and (min-width: 575px) {
-  /* line 196, ../sass/screen.scss */
+  /* line 204, ../sass/screen.scss */
   #drawer-button {
     display: none;
   }
 
-  /* line 199, ../sass/screen.scss */
+  /* line 207, ../sass/screen.scss */
   #menu-button-wrapper {
     display: block;
   }
 
-  /* line 202, ../sass/screen.scss */
+  /* line 210, ../sass/screen.scss */
   .feature, .doctor {
     width: 45%;
     margin: 10px 5px 0 5px;
   }
 }
 @media screen and (min-width: 750px) {
-  /* line 209, ../sass/screen.scss */
+  /* line 217, ../sass/screen.scss */
   .feature, .doctor {
     width: 30%;
     margin: 10px 5px 0 5px;
