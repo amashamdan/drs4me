@@ -2,12 +2,12 @@
 <html>
 <head>
 	<title>Drs4Me</title>
-	<link rel="shortcut icon" type="image/png" href="images/logo.png">
+	<link rel="shortcut icon" type="image/png" href="/images/logo.png">
 	<meta name="viewport" content="width=device-width,initial-scale=1">
 	<script src="https://use.fontawesome.com/0e2e583874.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 	<link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
-	<link rel="stylesheet" href="stylesheets/screen.css">
+	<link rel="stylesheet" href="/stylesheets/screen.css">
 </head>
 <body>
 
@@ -15,35 +15,48 @@
 		<ul><h3>Menu</h3><hr>
 			<li><a href="/">Home</a><br></li><hr class="drawer-hr">
 			<li><a href="/search">Search</a><br></li><hr class="drawer-hr">
-			<li><a href="/doctorLogin">Doctor Login</a><br></li><hr class="drawer-hr">
 			<button id="drawer-close-button">Close</button>
 		</ul>
 	</div> 
 
 	<div class="menu">
 		<div class="sizer">
-			<a href="/"><img id="logo" src="images/logo.svg"></a>
+			<a href="/"><img id="logo" src="/images/logo.svg"></a>
 			<i class="fa fa-bars" id="drawer-button" aria-hidden="true"></i>
 			<div id="menu-button-wrapper">
 				<a href="/"><button class="generic-button"><i class="fa fa-home" aria-hidden="true"></i> Home</button></a>
 				<a href="/search"><button class="generic-button"><i class="fa fa-search" aria-hidden="true"></i> Search</button></a>
-				<a href="/doctorLogin"><button class="generic-button"><i class="fa fa-user-md" aria-hidden="true"></i> Doctor Login</button></a>
 			</div>
 		</div>
 	</div>
 	<hr>
+
+	<% if (message) { %>
+	<p class="<%= messageType %>-message"><%= message %></p>
+	<% } %>
+
 	<div class="section sizer">
-		<% if (message) { %>
-		<p class="<%= messageType %>-message"><%= message %></p>
-		<% } %>
+		<h3><i class="fa fa-user" aria-hidden="true"></i> User Login</h3><hr style="margin: 10px 0 10px 0;">
+
 		<p>Please enter your Email and password to login.</p><br>
-		<form id="login-form" method="post" action="/login">
+		<form id="login-form" method="post" action="/login/user">
 			<input type="hidden" name="_csrf" value=<%= csrfToken %>>
 			<input type="text" name="email" placeholder="Email" required><br>
 			<input type="password" name="password" placeholder="Password" required><br>
 			<button type="submit" class="ok-button"><i class="fa fa-sign-in" aria-hidden="true"></i> Login</button>
 		</form>
 		<p>Not a member? <a href="/signup">Click here</a> to sign up.</p>
+	</div>
+
+	<div class="section sizer">
+		<h3><i class="fa fa-user-md" aria-hidden="true"></i> Doctor Login</h3><hr style="margin: 10px 0 10px 0;">
+		<p>Please enter your Email and password to login.</p><br>
+		<form id="login-form" method="post" action="/login/doctor">
+			<input type="hidden" name="_csrf" value=<%= csrfToken %>>
+			<input type="text" name="email" placeholder="Email" required><br>
+			<input type="password" name="password" placeholder="Password" required><br>
+			<button type="submit" class="ok-button"><i class="fa fa-sign-in" aria-hidden="true"></i> Login</button>
+		</form>
 	</div>
 
 	<div class="footer">
@@ -53,6 +66,6 @@
 			<p>Icons made by <a href="http://www.flaticon.com/authors/madebyoliver" title="Madebyoliver">Madebyoliver</a> from <a href="http://www.flaticon.com" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></p>
 		</div>
 	</div>
-	<script src="scripts/login.js"></script>
+	<script src="/scripts/login.js"></script>
 </body>
 </html>
