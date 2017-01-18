@@ -9,9 +9,14 @@ var mongoUrl = process.env.DATABASE;
 
 router.route("/")
 .get(function(req, res) {
-	res.render("login.ejs", {csrfToken: req.csrfToken(), message: undefined});
-})
+	if (req.session.user) {
+		res.redirect("/");
+	} else {
+		res.render("login.ejs", {csrfToken: req.csrfToken(), message: undefined});
+	}
+});
 
+router.route("/user")
 .post(parser, function(req, res) {
 	MongoClient.connect(mongoUrl, function(err, db) {
 		if (err) {
