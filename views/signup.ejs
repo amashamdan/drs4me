@@ -37,6 +37,10 @@
 	<div class="section sizer">
 		<p>Please fill in the below form and click 'Sign Up' button when you are done (all fields are required).</p><hr style="margin: 10px 0 10px 0">
 		<form id="signup-form" method="post" action="/signup">
+			<% if (message) { %>
+			<p class="error-message"><%= message %></p>
+			<% } %>
+			<input type="hidden" name="_csrf" value=<%= csrfToken %>>
 			<p>First name:</p>
 			<input type="text" name="firstName" placeholder="First name" required>
 			<p>Last name:</p>
