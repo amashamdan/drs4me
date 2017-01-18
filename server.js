@@ -30,6 +30,8 @@ var index = require("./routes/index");
 app.use("/", index);
 var login = require("./routes/login");
 app.use("/login", login);
+var logout = require("./routes/logout");
+app.use("/logout", logout);
 var signup = require("./routes/signup");
 app.use("/signup", signup);
 
