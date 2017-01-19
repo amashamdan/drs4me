@@ -28,7 +28,8 @@ router.route("/")
 							"password": hash,
 							"firstName": req.body.firstName,
 							"lastName": req.body.lastName,
-							"phone": req.body.phone
+							"phone": req.body.phone,
+							"appointments": []
 						}, function() {
 							res.render("login.ejs", {csrfToken: req.csrfToken(), message: "You have successfully signed up. You can now login to your account.", messageType: "success"});
 						});						
