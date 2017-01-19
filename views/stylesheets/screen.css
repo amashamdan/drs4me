@@ -221,25 +221,30 @@ hr {
   color: white;
 }
 
+/* line 203, ../sass/screen.scss */
+#edit-info-button, #dash-search-button {
+  margin-top: 10px;
+}
+
 @media screen and (min-width: 575px) {
-  /* line 204, ../sass/screen.scss */
+  /* line 208, ../sass/screen.scss */
   #drawer-button {
     display: none;
   }
 
-  /* line 207, ../sass/screen.scss */
+  /* line 211, ../sass/screen.scss */
   #menu-button-wrapper {
     display: block;
   }
 
-  /* line 210, ../sass/screen.scss */
+  /* line 214, ../sass/screen.scss */
   .feature, .doctor {
     width: 45%;
     margin: 10px 5px 0 5px;
   }
 }
 @media screen and (min-width: 750px) {
-  /* line 217, ../sass/screen.scss */
+  /* line 221, ../sass/screen.scss */
   .feature, .doctor {
     width: 30%;
     margin: 10px 5px 0 5px;

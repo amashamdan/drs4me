@@ -200,6 +200,10 @@ hr {
 	color: $ok-font-color;	
 }
 
+#edit-info-button, #dash-search-button {
+	margin-top: 10px;
+}
+
 @media screen and (min-width: 575px) {
 	#drawer-button {
 		display: none;
