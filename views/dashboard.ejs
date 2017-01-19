@@ -1,0 +1,62 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<title>Drs4Me</title>
+	<link rel="shortcut icon" type="image/png" href="images/logo.png">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<script src="https://use.fontawesome.com/0e2e583874.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
+	<link rel="stylesheet" href="stylesheets/screen.css">
+</head>
+<body>
+
+	<div id="drawer">
+		<ul><h3>Menu</h3><hr>
+			<li><a href="/">Home</a><br></li><hr class="drawer-hr">
+			<li><a href="/search">Search</a><br></li><hr class="drawer-hr">
+			<li><a href="/logout">Logout</a><br></li><hr class="drawer-hr">
+			<button id="drawer-close-button">Close</button>
+		</ul>
+	</div> 
+
+	<div class="menu">
+		<div class="sizer">
+			<a href="/"><img id="logo" src="images/logo.svg"></a>
+			<i class="fa fa-bars" id="drawer-button" aria-hidden="true"></i>
+			<div id="menu-button-wrapper">
+				<a href="/"><button class="generic-button"><i class="fa fa-home" aria-hidden="true"></i> Home</button></a>
+				<a href="/search"><button class="generic-button"><i class="fa fa-search" aria-hidden="true"></i> Search</button></a>
+				<a href="/logout"><button class="danger-button"><i class="fa fa-sign-out" aria-hidden="true"></i> Logout</button></a>
+			</div>
+		</div>
+	</div>
+	<hr>
+	<div class="section sizer">
+		<h3>Your information</h3><hr style="margin: 10px 0 10px 0;">
+		<p><strong>Name:</strong> <%= user.firstName %> <%= user.lastName %></p>
+		<p><strong>Email:</strong> <%= user.email %></p>
+		<p><strong>Phone:</strong> <%= user.phone %></p>
+		<a href="/editInfo"><button class="generic-button" id="edit-info-button"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Edit Info</button></a>
+	</div>
+
+	<div class="section sizer">
+		<h3>Your appointments</h3><hr style="margin: 10px 0 10px 0;">
+		<% if (user.appointments.length == 0) { %>
+		<p>You don't have any appointments scheduled. Click on the "Search" button below to search for a physician and schedule an appointment.</p>
+		<a href="/search"><button id="dash-search-button" class="generic-button"><i class="fa fa-search" aria-hidden="true"></i> Search</button></a>
+		<% } else { %>
+		<p>Still not added feature.</p>
+		<% } %>
+	</div>
+
+	<div class="footer">
+		<div class="sizer">
+			<p><a href="/admin">Admin Login</a></p>
+			<p>Copyright © Drs4Me 2017. All Rights Reserved</p>
+			<p>Icons made by <a href="http://www.flaticon.com/authors/madebyoliver" title="Madebyoliver">Madebyoliver</a> from <a href="http://www.flaticon.com" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></p>
+		</div>
+	</div>
+	<script src="scripts/dashboard.js"></script>
+</body>
+</html>
