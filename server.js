@@ -34,6 +34,8 @@ var logout = require("./routes/logout");
 app.use("/logout", logout);
 var signup = require("./routes/signup");
 app.use("/signup", signup);
+var dashboard = require("./routes/dashboard");
+app.use("/dashboard", dashboard);
 
 var PORT = Number(process.env.PORT || 8080);
 app.listen(PORT);
