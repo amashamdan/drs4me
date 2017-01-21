@@ -169,7 +169,7 @@ hr {
 	color: $ok-font-color;
 }
 
-#login-form, #signup-form {
+#login-form, #signup-form, #edit-info-form, #change-password-form {
 	width: 300px;
 	margin: 0 auto;
 	input {
@@ -200,7 +200,7 @@ hr {
 	color: $ok-font-color;	
 }
 
-#edit-info-button, #dash-search-button {
+.dash-content-button {
 	margin-top: 10px;
 }
 
