@@ -37,14 +37,14 @@
 		<p><strong>Name:</strong> <%= user.firstName %> <%= user.lastName %></p>
 		<p><strong>Email:</strong> <%= user.email %></p>
 		<p><strong>Phone:</strong> <%= user.phone %></p>
-		<a href="/editInfo"><button class="generic-button" id="edit-info-button"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Edit Info</button></a>
+		<a href="/edit"><button class="generic-button dash-content-button"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Edit Info or Password</button></a>
 	</div>
 
 	<div class="section sizer">
 		<h3>Your appointments</h3><hr style="margin: 10px 0 10px 0;">
 		<% if (user.appointments.length == 0) { %>
 		<p>You don't have any appointments scheduled. Click on the "Search" button below to search for a physician and schedule an appointment.</p>
-		<a href="/search"><button id="dash-search-button" class="generic-button"><i class="fa fa-search" aria-hidden="true"></i> Search</button></a>
+		<a href="/search"><button class="generic-button dash-content-button"><i class="fa fa-search" aria-hidden="true"></i> Search</button></a>
 		<% } else { %>
 		<p>Still not added feature.</p>
 		<% } %>
