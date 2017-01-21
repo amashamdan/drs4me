@@ -38,6 +38,8 @@ var dashboard = require("./routes/dashboard");
 app.use("/dashboard", dashboard);
 var edit = require("./routes/edit");
 app.use("/edit", edit);
+var adminLogin = require("./routes/adminLogin");
+app.use("/adminLogin", adminLogin);
 
 var PORT = Number(process.env.PORT || 8080);
 app.listen(PORT);
