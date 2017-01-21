@@ -36,6 +36,8 @@ var signup = require("./routes/signup");
 app.use("/signup", signup);
 var dashboard = require("./routes/dashboard");
 app.use("/dashboard", dashboard);
+var edit = require("./routes/edit");
+app.use("/edit", edit);
 
 var PORT = Number(process.env.PORT || 8080);
 app.listen(PORT);
