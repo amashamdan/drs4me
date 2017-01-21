@@ -55,13 +55,16 @@
 	<div class="section sizer">
 		<h3>Change password</h3><hr style="margin: 10px 0 10px 0;">
 		<form id="change-password-form" method="post" action="/edit/password">
+			<% if (messagePassword) { %>
+			<p class="error-message"><%= messagePassword %></p>
+			<% } %>
 			<input type="hidden" name="_csrf" value=<%= csrfToken %>>
 			<p>Current password:</p>
-			<input type="password" name="old-password" required>
+			<input type="password" name="oldPassword" required>
 			<p>New password <span style="font-size: 0.8em">(must be least 8 characters, and contain capital letters, numbers and special characters)</span>:</p>
-			<input id="password1" type="password" name="new-password1" required>
+			<input id="password1" type="password" name="newPassword1" required>
 			<p>Confirm new password:</p>
-			<input id="password2" type="password" name="new-password2" required>
+			<input id="password2" type="password" name="newPassword2" required>
 			<button id="save-password-button" type="submit" class="ok-button"> <i class="fa fa-floppy-o" aria-hidden="true"></i> Save</button>
 			<a href="/dashbaord"><button class="danger-button cancel-button">Cancel</button></a>
 		</form>
