@@ -185,12 +185,12 @@ hr {
 }
 
 /* line 172, ../sass/screen.scss */
-#login-form, #signup-form, #edit-info-form, #change-password-form {
+#login-form, #signup-form, #edit-info-form, #change-password-form, #add-admin-form {
   width: 300px;
   margin: 0 auto;
 }
 /* line 175, ../sass/screen.scss */
-#login-form input, #signup-form input, #edit-info-form input, #change-password-form input {
+#login-form input, #signup-form input, #edit-info-form input, #change-password-form input, #add-admin-form input {
   padding: 5px;
   margin-bottom: 10px;
   border-radius: 3px;
@@ -198,7 +198,7 @@ hr {
   width: 100%;
 }
 /* line 182, ../sass/screen.scss */
-#login-form button, #signup-form button, #edit-info-form button, #change-password-form button {
+#login-form button, #signup-form button, #edit-info-form button, #change-password-form button, #add-admin-form button {
   margin-bottom: 10px;
 }
 
