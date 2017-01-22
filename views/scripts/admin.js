@@ -1,3 +1,9 @@
+var specialties = ["Heart", "A6fal", "Tawleed", "Bones"];
+
+for (var specialty in specialties) {
+	$("select").append("<option class='specialty-option' value='" + specialties[specialty] + "'>" + specialties[specialty] + "</option>");
+}
+
 $("#drawer-button").click(function() {
 	$("#drawer").toggleClass("open");
 });
@@ -6,47 +12,57 @@ $(".section, #drawer-close-button").click(function() {
 	$("#drawer").removeClass("open");
 })
 
-$("#add-admin-form").submit(function(e) {
+$("#add-admin-form, #add-physician-form").submit(function(e) {
 	e.preventDefault();
-	$(".error-message").remove();
+	$(this).children(".error-message").remove();
 	/* To track if an error is found or not. */
 	var errorFound = false;
+
+	if ($(this).attr("id") == "add-physician-form")	{
+		if (!$.isNumeric($(this).children("#zip").val()) || ($(this).children("#zip").val() > 99999) || ($(this).children("#zip").val() < 10000)) {
+			/* If the zip code is invalid, an error message is prepended and errorFound set to true. */
+			$(this).prepend("<p class='error-message'>Please enter a valid zip code.</p>");
+			errorFound = true;
+		}
+	}
+
 	/* Ensure that the phone number is numeric. */
-	if (!$.isNumeric($("#phone").val())) {
+	if (!$.isNumeric($(this).children("#phone").val())) {
 		/* If the phone is invalid, an error message is prepended and errorFound set to true. */
-		$("#add-admin-form").prepend("<p class='error-message'>Please enter a valid phone number.</p>");
+		$(this).prepend("<p class='error-message'>Please enter a valid phone number.</p>");
 		errorFound = true;
 	}
 	/* Check that password 1 has at least 8 characters. */
-	if ($("#password1").val().length < 8) {
-		$("#add-admin-form").prepend("<p class='error-message'>Password is not 8 or more characters.</p>");
+	if ($(this).children("#password1").val().length < 8) {
+		$(this).prepend("<p class='error-message'>Password is not 8 or more characters.</p>");
 		errorFound = true;
 	/* Make sure that the password has a capital letter. */
-	}else if (!$("#password1").val().match(/[A-Z]/g)) {
-		$("#add-admin-form").prepend("<p class='error-message'>Password doesn't contain a capital letter.</p>");
+	}else if (!$(this).children("#password1").val().match(/[A-Z]/g)) {
+		$(this).prepend("<p class='error-message'>Password doesn't contain a capital letter.</p>");
 		errorFound = true;
 	/* Make sure the password has a number */
-	}else if (!$("#password1").val().match(/[0-9]/g)) {
-		$("#add-admin-form").prepend("<p class='error-message'>Password doesn't contain a number.</p>");
+	}else if (!$(this).children("#password1").val().match(/[0-9]/g)) {
+		$(this).prepend("<p class='error-message'>Password doesn't contain a number.</p>");
 		errorFound = true;
 	/* Make sure the password has a special character. */
-	}else if (!$("#password1").val().match(/[!@#$%^&*]/g)) {
-		$("#add-admin-form").prepend("<p class='error-message'>Password doesn't contain a special character.</p>");
+	}else if (!$(this).children("#password1").val().match(/[!@#$%^&*]/g)) {
+		$(this).prepend("<p class='error-message'>Password doesn't contain a special character.</p>");
 		errorFound = true;
 	/* Make sure both passwords match. */
-	} else if ($("#password1").val() !== $("#password2").val()) {
-		$("#add-admin-form").prepend("<p class='error-message'>Passwords do not match.</p>");
+	} else if ($(this).children("#password1").val() !== $(this).children("#password2").val()) {
+		$(this).prepend("<p class='error-message'>Passwords do not match.</p>");
 		errorFound = true;
 	}
 
-	if (!isValidEmailAddress($("#email").val())) {
-		$("#add-admin-form").prepend("<p class='error-message'>Please enter a valid email.</p>");
+	if (!isValidEmailAddress($(this).children("#email").val())) {
+		$(this).prepend("<p class='error-message'>Please enter a valid email.</p>");
 		errorFound = true;
 	}
 	/* If errors are found, the form is submitted. */
 	if (!errorFound) {
 		e.target.submit();
 	}
+
 });
 
 function isValidEmailAddress(emailAddress) {
