@@ -185,12 +185,12 @@ hr {
 }
 
 /* line 172, ../sass/screen.scss */
-#login-form, #signup-form, #edit-info-form, #change-password-form, #add-admin-form {
+#login-form, #signup-form, #edit-info-form, #change-password-form, #add-admin-form, #add-physician-form {
   width: 300px;
   margin: 0 auto;
 }
 /* line 175, ../sass/screen.scss */
-#login-form input, #signup-form input, #edit-info-form input, #change-password-form input, #add-admin-form input {
+#login-form input, #signup-form input, #edit-info-form input, #change-password-form input, #add-admin-form input, #add-physician-form input {
   padding: 5px;
   margin-bottom: 10px;
   border-radius: 3px;
@@ -198,53 +198,61 @@ hr {
   width: 100%;
 }
 /* line 182, ../sass/screen.scss */
-#login-form button, #signup-form button, #edit-info-form button, #change-password-form button, #add-admin-form button {
+#login-form button, #signup-form button, #edit-info-form button, #change-password-form button, #add-admin-form button, #add-physician-form button {
   margin-bottom: 10px;
 }
 
 /* line 187, ../sass/screen.scss */
+.specialty-list {
+  padding: 5px;
+  width: 300px;
+  border-radius: 3px;
+  margin-bottom: 15px;
+}
+
+/* line 194, ../sass/screen.scss */
 .error-message, .success-message {
   padding: 5px;
   border-radius: 3px;
   margin: 5px 0 5px 0;
 }
 
-/* line 193, ../sass/screen.scss */
+/* line 200, ../sass/screen.scss */
 .error-message {
   background-color: #F05D5E;
   color: white;
 }
 
-/* line 198, ../sass/screen.scss */
+/* line 205, ../sass/screen.scss */
 .success-message {
   background-color: #0F7173;
   color: white;
 }
 
-/* line 203, ../sass/screen.scss */
+/* line 210, ../sass/screen.scss */
 .dash-content-button {
   margin-top: 10px;
 }
 
 @media screen and (min-width: 575px) {
-  /* line 208, ../sass/screen.scss */
+  /* line 215, ../sass/screen.scss */
   #drawer-button {
     display: none;
   }
 
-  /* line 211, ../sass/screen.scss */
+  /* line 218, ../sass/screen.scss */
   #menu-button-wrapper {
     display: block;
   }
 
-  /* line 214, ../sass/screen.scss */
+  /* line 221, ../sass/screen.scss */
   .feature, .doctor {
     width: 45%;
     margin: 10px 5px 0 5px;
   }
 }
 @media screen and (min-width: 750px) {
-  /* line 221, ../sass/screen.scss */
+  /* line 228, ../sass/screen.scss */
   .feature, .doctor {
     width: 30%;
     margin: 10px 5px 0 5px;

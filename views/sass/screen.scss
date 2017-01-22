@@ -169,7 +169,7 @@ hr {
 	color: $ok-font-color;
 }
 
-#login-form, #signup-form, #edit-info-form, #change-password-form, #add-admin-form {
+#login-form, #signup-form, #edit-info-form, #change-password-form, #add-admin-form, #add-physician-form {
 	width: 300px;
 	margin: 0 auto;
 	input {
@@ -182,6 +182,13 @@ hr {
 	button {
 		margin-bottom: 10px;
 	}
+}
+
+.specialty-list {
+	padding: 5px;
+	width: 300px;
+	border-radius: 3px;
+	margin-bottom: 15px;
 }
 
 .error-message, .success-message {
