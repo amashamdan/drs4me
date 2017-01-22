@@ -27,22 +27,15 @@ router.route("/")
 			if (result.length == 0) {
 				res.render("adminLogin.ejs", {message: "First credential did not pass.", csrfToken: req.csrfToken()});
 			} else {
-				/*bcrypt.compare(req.body.credential1, result[0].password, function(err, checkResult) {
+				bcrypt.compare(req.body.credential1, result[0].password, function(err, checkResult) {
 					if (checkResult) {
-						req.session.user = result[0];
-						delete req.session.use.password;
-						res.redirect("/admin");
-					} else {
-						res.render("adminLogin.ejs", {message: "Second credential did not pass.", csrfToken: req.csrfToken()});
-					}
-				});*/
-					if (req.body.credential1 == result[0].password) {
 						req.session.user = result[0];
 						delete req.session.user.password;
 						res.redirect("/admin");
 					} else {
 						res.render("adminLogin.ejs", {message: "Second credential did not pass.", csrfToken: req.csrfToken()});
-					}				
+					}
+				});		
 			}
 		})
 	});
