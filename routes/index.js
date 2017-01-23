@@ -19,9 +19,9 @@ router.route("/")
 			var user = undefined;
 		}
 
-		var doctors = db.collection("doctors");
-		doctors.find({"advertised": true}).toArray(function(err, results) {
-			res.render("index.ejs", {user: user, advertised: results});
+		var physicians = db.collection("physicians");
+		physicians.find({"featured": true}).toArray(function(err, results) {
+			res.render("index.ejs", {user: user, featuredPhysicians: results});
 		});
 	});
 })
