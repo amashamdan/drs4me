@@ -211,6 +211,16 @@ hr {
 	margin-top: 10px;
 }
 
+.radio-input {
+	width: initial !important;
+	margin: 5px 5px 15px 10px;
+}
+
+.doctor-link {
+	text-decoration: none;
+	color: $section-font-color;
+}
+
 @media screen and (min-width: 575px) {
 	#drawer-button {
 		display: none;

@@ -234,25 +234,37 @@ hr {
   margin-top: 10px;
 }
 
+/* line 214, ../sass/screen.scss */
+.radio-input {
+  width: initial !important;
+  margin: 5px 5px 15px 10px;
+}
+
+/* line 219, ../sass/screen.scss */
+.doctor-link {
+  text-decoration: none;
+  color: gray;
+}
+
 @media screen and (min-width: 575px) {
-  /* line 215, ../sass/screen.scss */
+  /* line 225, ../sass/screen.scss */
   #drawer-button {
     display: none;
   }
 
-  /* line 218, ../sass/screen.scss */
+  /* line 228, ../sass/screen.scss */
   #menu-button-wrapper {
     display: block;
   }
 
-  /* line 221, ../sass/screen.scss */
+  /* line 231, ../sass/screen.scss */
   .feature, .doctor {
     width: 45%;
     margin: 10px 5px 0 5px;
   }
 }
 @media screen and (min-width: 750px) {
-  /* line 228, ../sass/screen.scss */
+  /* line 238, ../sass/screen.scss */
   .feature, .doctor {
     width: 30%;
     margin: 10px 5px 0 5px;
