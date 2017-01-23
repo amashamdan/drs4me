@@ -53,11 +53,13 @@
 
 	<div class="section doctors sizer">
 		<h4 style="width: 100%;">Featured doctors:</h4>
-		<% for (var i = 0; i < 3; i++) { %>
+		<% for (var physician in featuredPhysicians) { %>
 		<div class="doctor">
-			<img class="doctor-photo" src="" onError="this.onerror=null;this.src='/images/user2.svg';">
-			<p>Name goes here</p>
-			<p>Specialty:<span style="font-size: 0.9em;"> Spacialties here</span></p>
+			<a class="doctor-link" href="/doctor/<%= featuredPhysicians[physician]._id %>">	
+				<img class="doctor-photo" src="<%= featuredPhysicians[physician].imageUrl %>" onError="this.onerror=null;this.src='/images/user2.svg';">
+				<p><%= featuredPhysicians[physician].name %></p>
+				<p>Specialty:<span style="font-size: 0.9em;"> <%= featuredPhysicians[physician].specialty %></span></p>
+			</a>
 		</div>
 		<% } %>
 	</div>
