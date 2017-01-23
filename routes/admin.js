@@ -64,7 +64,7 @@ router.route("/addPhysician")
 							"email": req.body.email,
 							"password": hash,
 							"phone": req.body.phone,
-							"imageUrl": req.body.imageUrl,
+							"imageUrl": req.body.image,
 							"specialty": req.body.specialty,
 							"address": req.body.address,
 							"zip": req.body.zip
