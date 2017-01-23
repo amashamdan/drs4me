@@ -67,7 +67,8 @@ router.route("/addPhysician")
 							"imageUrl": req.body.image,
 							"specialty": req.body.specialty,
 							"address": req.body.address,
-							"zip": req.body.zip
+							"zip": req.body.zip,
+							"featured": JSON.parse(req.body.featured)
 						}, function() {
 							res.redirect("/admin");
 						});
