@@ -16,7 +16,7 @@ router.route("/")
 	}
 });
 
-router.route("/user")
+router.route("/:person")
 .post(parser, function(req, res) {
 	MongoClient.connect(mongoUrl, function(err, db) {
 		if (err) {
@@ -24,8 +24,13 @@ router.route("/user")
 			return;
 		}
 
-		var users = db.collection("users");
-		users.find({"email": req.body.email}).toArray(function(err, result) {
+		if (req.params.person == "user") {
+			var toBeSearched = db.collection("users");
+		} else if (req.params.person == "doctor") {
+			var toBeSearched = db.collection("physicians");
+		}
+
+		toBeSearched.find({"email": req.body.email}).toArray(function(err, result) {
 			if (result.length == 0) {
 				res.render("login.ejs", {csrfToken: req.csrfToken(), message: "Email not found.", messageType: "error"});
 			} else {
@@ -33,7 +38,13 @@ router.route("/user")
 					if (checkResult) {
 						req.session.user = result[0];
 						delete req.session.user.password;
-						res.redirect("/dashboard");
+						
+						if (req.params.person == "user") {
+							res.redirect("/dashboard");
+						} else if (req.params.person == "doctor") {
+							res.redirect("/doctorDashboard");
+						}
+					
 					} else {
 						res.render("login.ejs", {csrfToken: req.csrfToken(), message: "Incorrect password.", messageType: "error"});
 					}
